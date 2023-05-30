@@ -28,7 +28,8 @@ interface SlideProps {
     children: [ReactElement<HeaderProps>, ReactElement<ContentProps>];
 }
 
-export function Slide() {
+export function Slide(props: SlideProps) {
+    console.log(props);
     return <div style={{backgroundColor: 'red'}}>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur obcaecati doloribus, reiciendis sit suscipit molestiae consectetur perspiciatis fugit illum nulla commodi optio vitae laborum tempora recusandae maxime velit ratione quia.
     </div>
