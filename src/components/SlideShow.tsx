@@ -1,54 +1,96 @@
-import { ReactElement, ReactNode } from "react";
+import React, { ReactElement, ReactNode, useState } from "react";
 import slideShowStyles from "./SlideShow.module.css";
+import classNames from "classnames";
 
 interface SlideShowProps {
     children: ReactElement<SlideProps>[];
+    style?: React.CSSProperties;
+    headerStyle?: React.CSSProperties;
+    sidebarStyle?: React.CSSProperties;
+    className?: string;
 };
 
 export function SlideShow(props: SlideShowProps) {
+    const headers: {title: string, id: string}[] = [];
+    props.children.forEach(slide => {
+        const id = slide.props.id ?? slide.props.title;
+        headers.push({title: slide.props.title, id});
+    });
+
+    const [pageIndex, setPageIndex] = useState(0);
+
+    const currentHeader = headers[pageIndex].title;
+    const currentId = headers[pageIndex].id;
+    history.pushState({}, '', `#${currentId}`);
+
+    const className = classNames(slideShowStyles["slide-show"], props.className, 'slide-show');
+
     return (
-        <div className={slideShowStyles["slide-show"]}>
-            <SideBar/>
-            <Content>
+        <div className={className} style={props.style}>
+            <Header header={currentHeader} style={props.headerStyle} />
+            <SideBar headers={headers} current={pageIndex} style={props.sidebarStyle}/>
+            <div className={slideShowStyles["content-section"]} onScrollCapture={evt => {
+                setPageIndex(Math.round(evt.currentTarget.scrollTop / evt.currentTarget.clientHeight));
+            }}>
                 {
                     props.children
                 }
-            </Content>
+            </div>
         </div>
     );
 }
 
-function SideBar(){
-    return <div className={slideShowStyles["sidebar"]}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatibus illo dignissimos error dolores amet nam quo blanditiis? Facere repudiandae veritatis odio eaque porro et soluta nesciunt minima minus nisi.
+interface HeaderProps{
+    style?: React.CSSProperties;
+    header: string;
+}
+
+function Header(props: HeaderProps){
+    const className = classNames(slideShowStyles["header"], 'header');
+
+    return <div className={className} style={props.style}>
+    <h1>
+        {
+            props.header
+        }
+    </h1>
+</div>
+}
+
+interface SlideBarProps{
+    headers: {title: string, id: string}[];
+    current: number;
+    style?: React.CSSProperties;
+}
+
+function SideBar(props: SlideBarProps){
+    const className = classNames(slideShowStyles["sidebar"], 'sidebar');
+
+    return <div className={className} style={props.style}>
+        {
+            props.headers.map((header, index) => {
+                const isCurrent = index === props.current;
+                const className = classNames(slideShowStyles["index-link"], isCurrent ? 'current ' + slideShowStyles["current-index-link"] : null);
+
+                return <a href={`#${header.id}`} className={className} key={header.id}>{header.title}</a>
+        })
+        }
     </div>
 }
 
 interface SlideProps {
-    children: [ReactElement<HeaderProps>, ReactElement<ContentProps>];
+    title: string;
+    children: ReactNode;
+    className?: string;
+    id?: string;
+    style?: React.CSSProperties;
 }
 
 export function Slide(props: SlideProps) {
-    console.log(props);
-    return <div style={{backgroundColor: 'red'}}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur obcaecati doloribus, reiciendis sit suscipit molestiae consectetur perspiciatis fugit illum nulla commodi optio vitae laborum tempora recusandae maxime velit ratione quia.
-    </div>
-}
-
-interface HeaderProps {
-
-}
-
-export function Header() {
-    return <h1></h1>
-}
-
-interface ContentProps {
-    children: ReactNode;
-}
-
-export function Content(props: ContentProps) {
-    return <div className={slideShowStyles["content"]}>
+    const id = props.id ?? props.title;
+    const className = classNames(slideShowStyles["slide-content"], props.className, 'slide');
+    
+    return <div className={className} id={id} style={props.style}>
         {
             props.children
         }
