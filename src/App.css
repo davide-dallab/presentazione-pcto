@@ -9,25 +9,3 @@
 body {
   margin: 0;
 }
-
-.grid-with-header {
-  display: grid;
-  grid-template-rows: 1fr 5fr;
-}
-
-.content {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  scrollbar-width: none;
-}
-
-.slide {
-  height: 100%;
-  scroll-snap-align: start;
-  background-color: blue;
-}
-
-.slide:nth-child(2n){
-  background-color: red;
-}

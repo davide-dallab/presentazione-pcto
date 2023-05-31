@@ -2,12 +2,13 @@
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
-    width: min(75%, 1000px);
+    width: min(80%, 1000px);
     height: 100%;
     grid-template-areas: "sidebar header"
                          "sidebar content";
     margin: auto;
     margin-top: 5%;
+    max-height: calc(min(80vw, 1000px) / 16 * 9);
 }
 
 .sidebar {
@@ -15,6 +16,15 @@
     display: flex;
     flex-direction: column;
     background-color: #0002;
+    overflow-y: auto;
+    scrollbar-width: none;
+    max-height: 100%;
+}
+
+.sidebar a {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 .content-section {
@@ -40,16 +50,16 @@
 .index-link {
     text-decoration: none;
     color: black;
-    padding: 10px;
+    padding: 1vw;
     background-color: #0001;
-}
-
-.current-index-link {
-    background-color: yellowgreen;
 }
 
 .index-link:hover {
     background-color: #0002;
+}
+
+.current-index-link {
+    background-color: yellowgreen;
 }
 
 .header {
@@ -58,4 +68,16 @@
     align-items: center;
     justify-content: center;
     background-color: cyan;
+}
+
+@media screen and (width < 600px) {
+    .slide-show {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 5fr auto;
+        grid-template-areas: "header"
+                             "content"
+                             "sidebar";
+        max-height: 90vh;
+        overscroll-behavior-y: none;
+    }
 }

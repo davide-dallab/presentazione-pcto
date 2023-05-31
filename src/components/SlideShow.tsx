@@ -30,7 +30,7 @@ export function SlideShow(props: SlideShowProps) {
             <Header header={currentHeader} style={props.headerStyle} />
             <SideBar headers={headers} current={pageIndex} style={props.sidebarStyle}/>
             <div className={slideShowStyles["content-section"]} onScrollCapture={evt => {
-                setPageIndex(Math.round(evt.currentTarget.scrollTop / evt.currentTarget.clientHeight));
+                setPageIndex(Math.floor(evt.currentTarget.scrollTop / evt.currentTarget.clientHeight + .1));
             }}>
                 {
                     props.children
@@ -49,12 +49,12 @@ function Header(props: HeaderProps){
     const className = classNames(slideShowStyles["header"], 'header');
 
     return <div className={className} style={props.style}>
-    <h1>
-        {
-            props.header
-        }
-    </h1>
-</div>
+        <span>
+            {
+                props.header
+            }
+        </span>
+    </div>
 }
 
 interface SlideBarProps{
