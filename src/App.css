@@ -64,6 +64,10 @@ body {
 
 .slide-show[data-current="intro"] .sidebar, .slide-show[data-current="intro"] .header {
   color: black;
+  background-color: #5aa;
+}
+
+.slide-show[data-current="intro"] .header {
   background-color: #499;
 }
 
