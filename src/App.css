@@ -8,4 +8,65 @@
 
 body {
   margin: 0;
+  background-color: #002;
+}
+
+.slide-show {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slide-show .slide {
+  box-sizing: border-box;
+  padding: 35px 50px;
+  background-color: #cdf2f4;
+}
+
+.slide-show .slide * {
+  margin: 0;
+}
+
+.slide-show .header {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.slide.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  background-color: #cdf2f4;
+}
+
+.slide.title h1 {
+  font-size: 3em;
+}
+
+.slide.title h2 {
+  font-size: 2.25em;
+}
+
+.slide.title h3 {
+  font-size: 1.75em;
+}
+
+.index-link {
+  padding: 0 15px;
+}
+
+.sidebar, .header {
+  background-color: #228;
+  color: white;
+  transition: background-color 200ms, color 200ms;
+}
+
+.slide-show[data-current="intro"] .sidebar, .slide-show[data-current="intro"] .header {
+  color: black;
+  background-color: #499;
+}
+
+.index-link.current {
+  background-color: #fff5;
 }

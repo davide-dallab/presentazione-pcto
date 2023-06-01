@@ -15,7 +15,6 @@
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
-    background-color: #0002;
     overflow-y: auto;
     scrollbar-width: none;
     max-height: 100%;
@@ -34,32 +33,20 @@
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
     aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
 }
 
 .slide-content {
     width: 100%;
     height: 100%;
     scroll-snap-align: start;
-    background-color: red;
-}
-
-.slide-content:nth-child(2n){
-    background-color: blue;
+    flex-shrink: 0;
 }
 
 .index-link {
     text-decoration: none;
-    color: black;
-    padding: 1vw;
-    background-color: #0001;
-}
-
-.index-link:hover {
-    background-color: #0002;
-}
-
-.current-index-link {
-    background-color: yellowgreen;
+    color: inherit;
 }
 
 .header {
@@ -67,7 +54,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: cyan;
 }
 
 @media screen and (width < 600px) {

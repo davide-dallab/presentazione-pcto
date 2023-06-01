@@ -3,9 +3,11 @@ import { Slide, SlideShow } from "../components/SlideShow";
 export default function HomePage() {
   return (
     <>
-      <SlideShow>
-        <Slide title="Introduzione" id="intro">
-          <h2>Presentazione PCTO | Dalla Betta Davide</h2>
+      <SlideShow className="presentation">
+        <Slide title="Introduzione" id="intro" className="title">
+          <h1>Presentazione PCTO</h1>
+          <h2>Dalla Betta Davide</h2>
+          <h3>A.S. 2022/2023</h3>
         </Slide>
         <Slide title="Le esperienze" id="esperienze">
           <h3>Le due esperienze sono state alla scuola fainelli-gandhi e nell'azienda elettrone</h3>
