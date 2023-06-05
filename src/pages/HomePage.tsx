@@ -1,24 +1,16 @@
 import { Slide, SlideShow } from "../components/SlideShow";
-import computerScience from "../resources/deep-learning.png";
-import problemSolving from "../resources/idea.png";
-import teamWork from "../resources/networking.png";
-import joystick from "../resources/console.png";
-import blockProgramming from "../resources/algorithm.png";
-import simpleProblems from "../resources/solution.png";
-import book from "../resources/book.png";
-import comunication from "../resources/promotion.png";
-import reactLogo from "../resources/react-logo.svg";
+import images from "../resources/resources";
 
 export default function HomePage() {
   return (
     <>
       <SlideShow className="presentation">
-        <Slide title="Introduzione" id="intro" className="title flex-list">
+        <Slide title="Introduzione" id="introduction" className="title flex-list">
           <h1>Presentazione PCTO</h1>
           <h2>Dalla Betta Davide</h2>
           <h3>A.S. 2022/2023</h3>
         </Slide>
-        <Slide title="Le esperienze" id="esperienze" className="flex-list">
+        <Slide title="Le esperienze" id="esperiences" className="flex-list">
           <div className="link-esperienza">
             <a href="#fainelli-gandhi">Tutor: scuola media Fainelli Gandhi</a>
           </div>
@@ -27,26 +19,26 @@ export default function HomePage() {
           </div>
         </Slide>
         <Slide title="Fainelli-Gandhi" id="fainelli-gandhi" className="esperienza">
-          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
-          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
-          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
-          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
-          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
         </Slide>
         <Slide title="Tutoraggio" id="tutoring">
           <p>All'istituto fainelli gandhi è stata svolta un'attività di tutoring ai ragazzi delle scuole medie</p>
           <p>Nello specifico gli è stato insegnato scratch e i fondamenti del pensiero informatico</p>
         </Slide>
         <Slide title="Competenze applicate" id="used-skills-fainelli-ghandhi" className="flex-list skills">
-          <div><img src={computerScience} /><span>Conoscenze informatiche</span><span>Variabile, selezione, iterazione</span></div>
-          <div><img src={problemSolving} /><span>Problem solving</span></div>
-          <div><img src={joystick} /><span>Esperienza di GameDev</span><span>Sviluppata nel tempo libero</span></div>
-          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+          <div><img src={images.computerScience} /><span>Conoscenze informatiche</span><span>Variabile, selezione, iterazione</span></div>
+          <div><img src={images.problemSolving} /><span>Problem solving</span><span>Sviluppato nel corso degli anni</span></div>
+          <div><img src={images.joystick} /><span>Esperienza di GameDev</span><span>Formata nel tempo libero</span></div>
+          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span><span>Imparati in prima e terza</span></div>
         </Slide>
         <Slide title="Competenze apprese" id="learned-skills-fainelli-ghandhi" className="flex-list skills">
-          <div><img src={simpleProblems} /><span>Semplificazione di problemi complessi</span></div>
-          <div><img src={book} /><span>Tecniche di didattica</span></div>
-          <div><img src={comunication} /><span>Comunicazione con ragazzi più giovani</span></div>
+          <div><img src={images.simpleProblems} /><span>Riduzione di problemi complessi</span></div>
+          <div><img src={images.book} /><span>Tecniche di didattica</span></div>
+          <div><img src={images.comunication} /><span>Comunicazione con ragazzi più giovani</span></div>
         </Slide>
         <Slide title="Elettrone" id="elettrone">
           <p>All'istituto fainelli gandhi è stata svolta un'attività di tutoring ai ragazzi delle scuole medie</p>
@@ -57,15 +49,15 @@ export default function HomePage() {
           <p>Nello specifico gli è stato insegnato scratch e i fondamenti del pensiero informatico</p>
         </Slide>
         <Slide title="Competenze applicate" id="used-skills-elettrone" className="flex-list skills">
-          <div><img src={teamWork} /><span>Lavoro in team</span></div>
-          <div><img src={teamWork} /><span>Linguaggio C#</span></div>
-          <div><img src={teamWork} /><span>Database e SQL</span></div>
-          <div><img src={teamWork} /><span>HTML, JavaScript e CSS</span></div>
+          <div><img src={images.teamWork} /><span>Lavoro in team</span><span>Esercitato in laboratorio</span></div>
+          <div><img src={images.csharpLogo} /><span>Linguaggio C#</span><span>Studiato nel tempo libero</span></div>
+          <div><img src={images.databases} /><span>Database e SQL</span><span>Anticipati a fine quarto anno</span></div>
+          <div><img src={images.webdev} /><span>HTML, JavaScript e CSS</span><span>Accennati al biennio</span></div>
         </Slide>
         <Slide title="Competenze apprese" id="learned-skills-elettrone" className="flex-list skills">
-          <div><img src={teamWork} /><span>Team building</span></div>
-          <div><img src={teamWork} /><span>Linguaggio Javascript</span></div>
-          <div><img src={reactLogo} /><span>Libreria React</span></div>
+          <div><img src={images.teamBuilding} /><span>Team building</span></div>
+          <div><img src={images.javascript} /><span>Linguaggio Javascript</span></div>
+          <div><img src={images.reactLogo} /><span>Libreria React</span></div>
         </Slide>
         <Slide title="Considerazioni finali" id="considerations">
 

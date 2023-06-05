@@ -50,7 +50,7 @@
     justify-content: center;
 }
 
-@media screen and (width < 600px) {
+@media screen and not (orientation: landscape) {
     .slide-show {
         grid-template-columns: 100%;
         grid-template-rows: 1fr 5fr auto;
