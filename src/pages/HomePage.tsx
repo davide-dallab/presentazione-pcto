@@ -18,17 +18,20 @@ export default function HomePage() {
           <h2>Dalla Betta Davide</h2>
           <h3>A.S. 2022/2023</h3>
         </Slide>
-        <Slide title="Le esperienze" id="esperienze" className="title">
+        <Slide title="Le esperienze" id="esperienze" className="flex-list">
           <div className="link-esperienza">
-            <a href="#tutor">Tutor: scuola media Fainelli Gandhi</a>
+            <a href="#fainelli-gandhi">Tutor: scuola media Fainelli Gandhi</a>
           </div>
           <div className="link-esperienza">
-            <a href="#webdev">Web development: Elettrone</a>
+            <a href="#elettrone">Web development: Elettrone</a>
           </div>
         </Slide>
-        <Slide title="Fainelli-Gandhi" id="fainelli-ghandhi">
-          <p>All'istituto fainelli gandhi è stata svolta un'attività di tutoring ai ragazzi delle scuole medie</p>
-          <p>Nello specifico gli è stato insegnato scratch e i fondamenti del pensiero informatico</p>
+        <Slide title="Fainelli-Gandhi" id="fainelli-gandhi" className="esperienza">
+          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+          <div><img src={blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
         </Slide>
         <Slide title="Tutoraggio" id="tutoring">
           <p>All'istituto fainelli gandhi è stata svolta un'attività di tutoring ai ragazzi delle scuole medie</p>
