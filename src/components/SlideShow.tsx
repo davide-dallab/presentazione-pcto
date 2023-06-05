@@ -21,7 +21,6 @@ export function SlideShow(props: SlideShowProps) {
 
     const currentHeader = headers[pageIndex].title;
     const currentId = headers[pageIndex].id;
-    history.pushState({}, '', `#${currentId}`);
 
     const className = classNames(slideShowStyles["slide-show"], props.className, 'slide-show');
 
