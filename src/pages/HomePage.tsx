@@ -1,4 +1,5 @@
 import { Slide, SlideShow } from "../components/SlideShow";
+import logo from "../resources/Logo.png";
 
 export default function HomePage() {
   return (
@@ -9,12 +10,20 @@ export default function HomePage() {
           <h2>Dalla Betta Davide</h2>
           <h3>A.S. 2022/2023</h3>
         </Slide>
-        <Slide title="Le esperienze" id="esperienze">
-          <h3>Le due esperienze sono state alla scuola fainelli-gandhi e nell'azienda elettrone</h3>
+        <Slide title="Le esperienze" id="esperienze" className="title">
+          <div className="link-esperienza">
+            <a href="#tutor">Tutor: scuola media Fainelli Gandhi</a>
+          </div>
+          <div className="link-esperienza">
+            <a href="#webdev">Web development: Elettrone</a>
+          </div>
         </Slide>
-        <Slide title="Fainelli-Gandhi" id="tutor">
-          <p>All'istituto fainelli gandhi è stata svolta un'attività di tutoring ai ragazzi delle scuole medie</p>
-          <p>Nello specifico gli è stato insegnato scratch e i fondamenti del pensiero informatico</p>
+        <Slide title="Fainelli-Gandhi" id="tutor" className="esperienza">
+          <div className="caratteristica"><img src={logo} alt="test logo" /><span>da  a -</span></div>
+          <div className="caratteristica"><img src={logo} alt="test logo" /><span>da - a -</span></div>
+          <div className="caratteristica"><img src={logo} alt="test logo" /><span>da - a -</span></div>
+          <div className="caratteristica"><img src={logo} alt="test logo" /><span>da - a -</span></div>
+          <div className="caratteristica"><img src={logo} alt="test logo" /><span>da - a -</span></div>
         </Slide>
         <Slide title="Competenze Applicate" id="used-skills-1">
           <p>Conoscenze teoriche di tipo informatico</p>
