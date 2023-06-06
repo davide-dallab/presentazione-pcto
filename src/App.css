@@ -200,7 +200,6 @@ body {
 }
 
 @media print {
-
   .slide-show {
     border-radius: 0;
     overflow: visible;
@@ -209,9 +208,5 @@ body {
     top: 0;
     left: 0;
     translate: 0 0;
-  }
-
-  html, body {
-    height: 99%;
   }
 }
