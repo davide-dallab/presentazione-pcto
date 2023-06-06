@@ -12,6 +12,9 @@ import webdev from "./coding.png";
 import teamBuilding from "./help.png";
 import csharpLogo from "./cs-logo.svg";
 import javascript from "./javascript.png";
+import location from "./location.png";
+import building from "./building.png";
+import suitcase from "./suitcase.png";
 
 const resources = {
     computerScience,
@@ -27,7 +30,10 @@ const resources = {
     webdev,
     teamBuilding,
     csharpLogo,
-    javascript
+    javascript,
+    location,
+    building,
+    suitcase
 }
 
 export default resources;

@@ -5,66 +5,180 @@ export default function HomePage() {
   return (
     <>
       <SlideShow className="presentation">
-        <Slide title="Introduzione" id="introduction" className="title flex-list">
+        <Slide
+          title="Introduzione"
+          id="introduction"
+          className="title flex-list"
+        >
           <h1>Presentazione PCTO</h1>
           <h2>Dalla Betta Davide</h2>
           <h3>A.S. 2022/2023</h3>
         </Slide>
-        <Slide title="Le esperienze" id="esperiences" className="flex-list">
+        <Slide title="Le esperienze" id="experiences" className="flex-list">
           <div className="link-esperienza">
-            <a href="#fainelli-gandhi">Tutor: scuola media Fainelli Gandhi</a>
+            <a href="#fainelli-gandhi" className="highlight">Tutor: scuola media Fainelli Gandhi</a>
           </div>
           <div className="link-esperienza">
-            <a href="#elettrone">Web development: Elettrone</a>
+            <a href="#elettrone" className="highlight">Web development: Elettrone</a>
           </div>
         </Slide>
-        <Slide title="Fainelli-Gandhi" id="fainelli-gandhi" className="esperienza">
-          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
-          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
-          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
-          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
-          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span></div>
+        <Slide
+          title="Fainelli-Gandhi"
+          id="fainelli-gandhi"
+          className="esperienza"
+        >
+          <div className="caratteristiche">
+            <div className="highlight">
+              <img src={images.building} />
+              <span>
+                I.C. 6 <br />
+                Fainelli-Gandhi
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.location} />
+              <span>
+                Via Puglie 7/E, <br />
+                Chievo
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.suitcase} />
+              <span>Scuola secondaria di Primo Grado</span>
+            </div>
+          </div>
         </Slide>
         <Slide title="Tutoraggio" id="tutoring">
-          <p>All'istituto fainelli gandhi è stata svolta un'attività di tutoring ai ragazzi delle scuole medie</p>
-          <p>Nello specifico gli è stato insegnato scratch e i fondamenti del pensiero informatico</p>
+          <p>
+            All'istituto fainelli gandhi è stata svolta un'attività di tutoring
+            ai ragazzi delle scuole medie
+          </p>
+          <p>
+            Nello specifico gli è stato insegnato scratch e i fondamenti del
+            pensiero informatico
+          </p>
         </Slide>
-        <Slide title="Competenze applicate" id="used-skills-fainelli-ghandhi" className="flex-list skills">
-          <div><img src={images.computerScience} /><span>Conoscenze informatiche</span><span>Variabile, selezione, iterazione</span></div>
-          <div><img src={images.problemSolving} /><span>Problem solving</span><span>Sviluppato nel corso degli anni</span></div>
-          <div><img src={images.joystick} /><span>Esperienza di GameDev</span><span>Formata nel tempo libero</span></div>
-          <div><img src={images.blockProgramming} /><span>Programmazione a blocchi e Scratch</span><span>Imparati in prima e terza</span></div>
+        <Slide
+          title="Competenze applicate"
+          id="used-skills-fainelli-ghandhi"
+          className="flex-list skills"
+        >
+          <div className="highlight">
+            <img src={images.computerScience} />
+            <span>Conoscenze informatiche</span>
+            <span>Variabile, selezione, iterazione</span>
+          </div>
+          <div className="highlight">
+            <img src={images.problemSolving} />
+            <span>Problem solving</span>
+            <span>Sviluppato nel corso degli anni</span>
+          </div>
+          <div className="highlight">
+            <img src={images.joystick} />
+            <span>Esperienza di GameDev</span>
+            <span>Formata nel tempo libero</span>
+          </div>
+          <div className="highlight">
+            <img src={images.blockProgramming} />
+            <span>Programmazione a blocchi e Scratch</span>
+            <span>Imparati in prima e terza</span>
+          </div>
         </Slide>
-        <Slide title="Competenze apprese" id="learned-skills-fainelli-ghandhi" className="flex-list skills">
-          <div><img src={images.simpleProblems} /><span>Riduzione di problemi complessi</span></div>
-          <div><img src={images.book} /><span>Tecniche di didattica</span></div>
-          <div><img src={images.comunication} /><span>Comunicazione con ragazzi più giovani</span></div>
+        <Slide
+          title="Competenze apprese"
+          id="learned-skills-fainelli-ghandhi"
+          className="flex-list skills"
+        >
+          <div className="highlight">
+            <img src={images.simpleProblems} />
+            <span>Riduzione di problemi complessi</span>
+          </div>
+          <div className="highlight">
+            <img src={images.book} />
+            <span>Tecniche di didattica</span>
+          </div>
+          <div className="highlight">
+            <img src={images.comunication} />
+            <span>Comunicazione con ragazzi più giovani</span>
+          </div>
         </Slide>
-        <Slide title="Elettrone" id="elettrone">
-          <p>All'istituto fainelli gandhi è stata svolta un'attività di tutoring ai ragazzi delle scuole medie</p>
-          <p>Nello specifico gli è stato insegnato scratch e i fondamenti del pensiero informatico</p>
+        <Slide title="Elettrone" id="elettrone" className="esperienza">
+          <div className="caratteristiche">
+            <div className="highlight">
+              <img src={images.building} />
+              <span>
+                Elettrone
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.location} />
+              <span>
+                Via Enrico Fermi 11/A, <br />
+                Via Augusto Righi 2
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.suitcase} />
+              <span>Soluzioni intelligenti per <br/>la gestione dell'energia elettrica</span>
+            </div>
+          </div>
         </Slide>
         <Slide title="Sviluppo Web" id="web-development">
-          <p>All'istituto fainelli gandhi è stata svolta un'attività di tutoring ai ragazzi delle scuole medie</p>
-          <p>Nello specifico gli è stato insegnato scratch e i fondamenti del pensiero informatico</p>
+          <p>
+            All'istituto fainelli gandhi è stata svolta un'attività di tutoring
+            ai ragazzi delle scuole medie
+          </p>
+          <p>
+            Nello specifico gli è stato insegnato scratch e i fondamenti del
+            pensiero informatico
+          </p>
         </Slide>
-        <Slide title="Competenze applicate" id="used-skills-elettrone" className="flex-list skills">
-          <div><img src={images.teamWork} /><span>Lavoro in team</span><span>Esercitato in laboratorio</span></div>
-          <div><img src={images.csharpLogo} /><span>Linguaggio C#</span><span>Studiato nel tempo libero</span></div>
-          <div><img src={images.databases} /><span>Database e SQL</span><span>Anticipati a fine quarto anno</span></div>
-          <div><img src={images.webdev} /><span>HTML, JavaScript e CSS</span><span>Accennati al biennio</span></div>
+        <Slide
+          title="Competenze applicate"
+          id="used-skills-elettrone"
+          className="flex-list skills"
+        >
+          <div className="highlight">
+            <img src={images.teamWork} />
+            <span>Lavoro in team</span>
+            <span>Esercitato in laboratorio</span>
+          </div>
+          <div className="highlight">
+            <img src={images.csharpLogo} />
+            <span>Linguaggio C#</span>
+            <span>Studiato nel tempo libero</span>
+          </div>
+          <div className="highlight">
+            <img src={images.databases} />
+            <span>Database e SQL</span>
+            <span>Anticipati a fine quarto anno</span>
+          </div>
+          <div className="highlight">
+            <img src={images.webdev} />
+            <span>HTML, JavaScript e CSS</span>
+            <span>Accennati al biennio</span>
+          </div>
         </Slide>
-        <Slide title="Competenze apprese" id="learned-skills-elettrone" className="flex-list skills">
-          <div><img src={images.teamBuilding} /><span>Team building</span></div>
-          <div><img src={images.javascript} /><span>Linguaggio Javascript</span></div>
-          <div><img src={images.reactLogo} /><span>Libreria React</span></div>
+        <Slide
+          title="Competenze apprese"
+          id="learned-skills-elettrone"
+          className="flex-list skills"
+        >
+          <div className="highlight">
+            <img src={images.teamBuilding} />
+            <span>Team building</span>
+          </div>
+          <div className="highlight">
+            <img src={images.javascript} />
+            <span>Linguaggio Javascript</span>
+          </div>
+          <div className="highlight">
+            <img src={images.reactLogo} />
+            <span>Libreria React</span>
+          </div>
         </Slide>
-        <Slide title="Considerazioni finali" id="considerations">
-
-        </Slide>
-        <Slide title="Prospettive future" id="future">
-
-        </Slide>
+        <Slide title="Considerazioni finali" id="considerations"></Slide>
+        <Slide title="Prospettive future" id="future"></Slide>
       </SlideShow>
     </>
   );

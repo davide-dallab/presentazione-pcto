@@ -45,6 +45,13 @@ body {
   left: 50%;
   translate: -50% -50%;
   width: min(90%, 1250px);
+  --frame-background-color: #228;
+  --frame-color: white;
+  --slide-background-color: #cdf2f4;
+  --slide-highlight-background-color: #fff5;
+  --slide-highlight-color: black;
+  --slide-highlight-border-color: #228;
+  --slide-highlight-background-color-hover: #fffa;
 }
 
 .slide-show .content {
@@ -54,7 +61,7 @@ body {
 .slide-show .slide {
   box-sizing: border-box;
   padding: 1.75rem 2.5rem;
-  background-color: #cdf2f4;
+  background-color: var(--slide-background-color);
 }
 
 .slide-show .header {
@@ -68,7 +75,6 @@ body {
 
 .slide.title {
   gap: 1rem;
-  background-color: #cdf2f4;
 }
 
 .slide.title h1 {
@@ -83,27 +89,58 @@ body {
   font-size: 1.75rem;
 }
 
+.slide img {
+  filter: var(--image-filter);
+}
+
 .index-link {
   padding: 0 1rem;
 }
 
-.sidebar, .header {
-  background-color: #228;
-  color: white;
+.sidebar,
+.header {
+  background-color: var(--frame-background-color);
+  color: var(--frame-color);
   transition: background-color 200ms, color 200ms;
 }
 
-.slide-show[data-current="introduction"] .sidebar, .slide-show[data-current="introduction"] .header {
-  color: black;
-  background-color: #5aa;
+.header {
+  border-left: .1rem solid #0002;
 }
 
-.slide-show[data-current="introduction"] .header {
-  background-color: #499;
+#experiences {
+  background: linear-gradient(160deg, cyan, #0283C2);
+}
+
+.slide-show[data-current="introduction"] {
+  --frame-color: black;
+  --frame-background-color: #5aa;
+}
+
+.slide-show[data-current*="elettrone"],
+.slide-show[data-current="web-development"] {
+  --frame-color: white;
+  --frame-background-color: #0283C2;
+  --slide-background-color: #F5F5F7;
+  --slide-highlight-border-color: #0283C2;
+  --slide-highlight-background-color: #2ca3dfaa;
+  --slide-highlight-color: #F5F5F7;
+  --image-filter: invert(.95);
 }
 
 .index-link.current {
   background-color: #fff5;
+}
+
+.highlight {
+  background-color: var(--slide-highlight-background-color);
+  transition: background-color 250ms;
+  border: solid .1rem var(--slide-highlight-border-color);
+  color: var(--slide-highlight-color);
+}
+
+a.highlight:hover {
+  background-color: var(--slide-highlight-background-color-hover);
 }
 
 .flex-list {
@@ -119,39 +156,38 @@ body {
   font-size: 1.5rem;
 }
 
-.skills > div {
+.skills>div {
   padding: 1rem 0;
-  background-color: #fff5;
   border-radius: .5rem;
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.skills > div > span {
+.skills>div>span {
   font-weight: bold;
   text-decoration: underline;
   font-size: 1.1rem;
 }
 
-.skills > div > span:nth-child(2):nth-last-child(2) {
-  border-right: solid black .15rem;
+.skills>div>span:nth-child(2):nth-last-child(2) {
+  border-right: solid var(--slide-highlight-color) .15rem;
   padding-right: .5rem;
   margin-right: .5rem;
 }
 
-.skills > div > span:nth-child(3):last-child {
+.skills>div>span:nth-child(3):last-child {
   font-size: .75rem;
   font-weight: normal;
   text-decoration: none;
 }
 
-.skills > div > img {
+.skills>div>img {
   width: 3rem;
   margin: 0 1.25rem;
 }
 
-#esperiences .link-esperienza {
+#experiences .link-esperienza {
   flex-grow: 1;
   width: 100%;
   display: flex;
@@ -159,10 +195,8 @@ body {
   justify-content: center;
 }
 
-#esperiences .link-esperienza a {
+#experiences .link-esperienza a {
   padding: 3rem 0;
-  background-color: #fff6;
-  transition: background-color 250ms;
   font-size: 1.25rem;
   border-radius: .5rem;
   width: 100%;
@@ -171,21 +205,24 @@ body {
   color: black;
 }
 
-#esperiences .link-esperienza a:hover {
-  background-color: #fffa;
+.esperienza {
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
 }
 
-.esperienza {
+.esperienza>.caratteristiche {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: .5rem;
+  width: 100%;
+  height: 65%;
 }
 
-.esperienza>div {
+.esperienza>.caratteristiche>div {
   flex-basis: calc(50% - 0.5em);
-  background-color: #fff6;
   display: flex;
   align-items: center;
   border-radius: .5rem;
@@ -194,9 +231,13 @@ body {
   gap: .75rem;
 }
 
-.esperienza>div>img {
-  height: 3.5rem;
-  margin: 0 1.25rem;
+.esperienza>.caratteristiche>div:last-child:nth-child(2n+1) {
+  flex-basis: 75%;
+}
+
+.esperienza>.caratteristiche>div>img {
+  height: 3rem;
+  margin: 0 .25em;
 }
 
 @media print {
@@ -208,5 +249,9 @@ body {
     top: 0;
     left: 0;
     translate: 0 0;
+  }
+
+  :root {
+    font-size: 24px;
   }
 }
