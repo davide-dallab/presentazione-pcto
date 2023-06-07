@@ -22,10 +22,13 @@ export default function HomePage() {
             <a href="#elettrone" className="highlight">Web development: Elettrone</a>
           </div>
         </Slide>
+        <Slide title="Fainelli-Gandhi" id="fainelli-gandhi" className="title flex-list fainelli-gandhi">
+          <h1>Fainelli-Ghandi</h1>
+        </Slide>
         <Slide
-          title="Fainelli-Gandhi"
-          id="fainelli-gandhi"
-          className="esperienza"
+          title="La scuola"
+          id="scuola-fainelli-gandhi"
+          className="esperienza fainelli-gandhi"
         >
           <div className="caratteristiche">
             <div className="highlight">
@@ -48,61 +51,96 @@ export default function HomePage() {
             </div>
           </div>
         </Slide>
-        <Slide title="Tutoraggio" id="tutoring">
-          <p>
-            All'istituto fainelli gandhi è stata svolta un'attività di tutoring
-            ai ragazzi delle scuole medie
-          </p>
-          <p>
-            Nello specifico gli è stato insegnato scratch e i fondamenti del
-            pensiero informatico
-          </p>
+        <Slide
+          title="Diario"
+          id="diario-fainelli-gandhi"
+          className="esperienza fainelli-gandhi"
+        >
+          <div className="caratteristiche">
+            <div className="highlight">
+              <img src={images.calendar} />
+              <span>
+                Inizio: 6 Dicembre 2021 <br />
+                Fine: 4 Aprile 2022
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.clock} />
+              <span>
+                Lunedì 14:30-16:30, <br />
+                20 ore
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.person} />
+              <span>
+                Tutor scolastico: Valenza Salvatore <br />
+                Tutor aziendale: Residori Ornella
+              </span>
+            </div>
+          </div>
+        </Slide>
+        <Slide title="Mansioni" id="tutoring-fainelli-gandhi" className="mansioni fainelli-gandhi">
+          <h1>Tutoraggio</h1>
+          <div>
+            <div className="mansione highlight">
+              <img src={images.glasses} style={{scale: '1.25'}}/>
+              <span>Sorveglianza durante il corso di coding</span>
+            </div>
+            <div className="mansione highlight">
+              <img src={images.magnifingGlass}/>
+              <span>Aiuto comprensione e soluzione problemi</span>
+            </div>
+            <div className="mansione highlight">
+              <img src={images.explanation} style={{scale: '1.5'}}/>
+              <span>Spiegazioni teoriche di semplici concetti informatici</span>
+            </div>
+          </div>
         </Slide>
         <Slide
           title="Competenze applicate"
-          id="used-skills-fainelli-ghandhi"
-          className="flex-list skills"
+          id="used-skills-fainelli-gandhi"
+          className="flex-list skills fainelli-gandhi"
         >
-          <div className="highlight">
-            <img src={images.computerScience} />
-            <span>Conoscenze informatiche</span>
-            <span>Variabile, selezione, iterazione</span>
-          </div>
           <div className="highlight">
             <img src={images.problemSolving} />
             <span>Problem solving</span>
-            <span>Sviluppato nel corso degli anni</span>
           </div>
           <div className="highlight">
             <img src={images.joystick} />
-            <span>Esperienza di GameDev</span>
-            <span>Formata nel tempo libero</span>
+            <span>GameDev</span>
           </div>
           <div className="highlight">
             <img src={images.blockProgramming} />
             <span>Programmazione a blocchi e Scratch</span>
-            <span>Imparati in prima e terza</span>
-          </div>
-        </Slide>
-        <Slide
-          title="Competenze apprese"
-          id="learned-skills-fainelli-ghandhi"
-          className="flex-list skills"
-        >
-          <div className="highlight">
-            <img src={images.simpleProblems} />
-            <span>Riduzione di problemi complessi</span>
-          </div>
-          <div className="highlight">
-            <img src={images.book} />
-            <span>Tecniche di didattica</span>
           </div>
           <div className="highlight">
             <img src={images.comunication} />
-            <span>Comunicazione con ragazzi più giovani</span>
+            <span>Comunicazione</span>
           </div>
         </Slide>
-        <Slide title="Elettrone" id="elettrone" className="esperienza">
+        <Slide
+          title="Competenze sviluppate"
+          id="learned-skills-fainelli-gandhi"
+          className="flex-list skills fainelli-gandhi"
+        >
+          <div className="highlight">
+            <img src={images.simpleProblems} />
+            <span>Scomposizione di problemi complessi</span>
+          </div>
+          <div className="highlight">
+            <img src={images.book} />
+            <span>Metodi di insegnamento</span>
+          </div>
+          <div className="highlight">
+            <img src={images.young} />
+            <span>Porsi a ragazzi più giovani</span>
+          </div>
+        </Slide>
+        <Slide title="Elettrone" id="elettrone" className="title flex-list elettrone">
+          <h1>Elettrone</h1>
+        </Slide>
+        <Slide title="L'azienda" id="azienda-elettrone" className="esperienza elettrone">
           <div className="caratteristiche">
             <div className="highlight">
               <img src={images.building} />
@@ -119,50 +157,86 @@ export default function HomePage() {
             </div>
             <div className="highlight">
               <img src={images.suitcase} />
-              <span>Soluzioni intelligenti per <br/>la gestione dell'energia elettrica</span>
+              <span>
+                Soluzioni intelligenti per la gestione <br />
+                dell'energia elettrica
+              </span>
             </div>
           </div>
         </Slide>
-        <Slide title="Sviluppo Web" id="web-development">
-          <p>
-            All'istituto fainelli gandhi è stata svolta un'attività di tutoring
-            ai ragazzi delle scuole medie
-          </p>
-          <p>
-            Nello specifico gli è stato insegnato scratch e i fondamenti del
-            pensiero informatico
-          </p>
+        <Slide
+          title="Diario"
+          id="diario-elettrone"
+          className="esperienza elettrone"
+        >
+          <div className="caratteristiche">
+            <div className="highlight">
+              <img src={images.calendar} />
+              <span>
+                Inizio: 6 Giugno 2022 <br />
+                Fine: 1 Luglio 2022
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.clock} />
+              <span>
+                Lunedì-Venerdì <br />
+                9:00-13:00 / 14:00-18:00, <br />
+                160 ore
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.person} />
+              <span>
+                Tutor scolastico: Valenza Salvatore <br />
+                Tutor aziendale: Turazzini Massimiliano
+              </span>
+            </div>
+          </div>
+        </Slide>
+        <Slide title="Mansioni" id="software-development-elettrone" className="mansioni elettrone">
+          <h1>Sviluppo Software</h1>
+          <div>
+            <div className="mansione highlight">
+              <img src={images.powerapps}/>
+              <span>Sviluppo app aziendale tramite Microsoft Power Apps</span>
+            </div>
+            <div className="mansione highlight">
+              <img src={images.reactLogo}/>
+              <span>Sviluppo WebApp con React.js</span>
+            </div>
+            <div className="mansione highlight">
+              <img src={images.api}/>
+              <span>Sviluppo RESTful API in ambiente .NET</span>
+            </div>
+          </div>
         </Slide>
         <Slide
           title="Competenze applicate"
           id="used-skills-elettrone"
-          className="flex-list skills"
+          className="flex-list skills elettrone"
         >
           <div className="highlight">
             <img src={images.teamWork} />
             <span>Lavoro in team</span>
-            <span>Esercitato in laboratorio</span>
           </div>
           <div className="highlight">
             <img src={images.csharpLogo} />
             <span>Linguaggio C#</span>
-            <span>Studiato nel tempo libero</span>
           </div>
           <div className="highlight">
             <img src={images.databases} />
             <span>Database e SQL</span>
-            <span>Anticipati a fine quarto anno</span>
           </div>
           <div className="highlight">
             <img src={images.webdev} />
             <span>HTML, JavaScript e CSS</span>
-            <span>Accennati al biennio</span>
           </div>
         </Slide>
         <Slide
-          title="Competenze apprese"
+          title="Competenze sviluppate"
           id="learned-skills-elettrone"
-          className="flex-list skills"
+          className="flex-list skills elettrone"
         >
           <div className="highlight">
             <img src={images.teamBuilding} />

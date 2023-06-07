@@ -15,6 +15,15 @@ import javascript from "./javascript.png";
 import location from "./location.png";
 import building from "./building.png";
 import suitcase from "./suitcase.png";
+import person from "./user.png";
+import calendar from "./calendar.png";
+import clock from "./time.png";
+import glasses from "./light-eyeglasses-.png";
+import magnifingGlass from "./problem-solving.png";
+import explanation from "./reasonable.png";
+import powerapps from "./power-apps.svg";
+import api from "./api.png";
+import young from "./children.png";
 
 const resources = {
     computerScience,
@@ -33,7 +42,16 @@ const resources = {
     javascript,
     location,
     building,
-    suitcase
+    suitcase,
+    person,
+    calendar,
+    clock,
+    glasses,
+    magnifingGlass,
+    explanation,
+    powerapps,
+    api,
+    young
 }
 
 export default resources;
