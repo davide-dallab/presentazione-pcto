@@ -251,8 +251,12 @@ export default function HomePage() {
             <span>Libreria React</span>
           </div>
         </Slide>
-        <Slide title="Considerazioni finali" id="considerations"></Slide>
-        <Slide title="Prospettive future" id="future"></Slide>
+        <Slide title="Considerazioni finali" id="considerations">
+
+        </Slide>
+        <Slide title="Prospettive future" id="future">
+          
+        </Slide>
       </SlideShow>
     </>
   );

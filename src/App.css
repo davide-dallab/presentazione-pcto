@@ -317,6 +317,6 @@ a.highlight:hover {
 @font-face {
   font-family: 'Cascadia Code';
   src: local('Cascadia Code'),
-  url('src/fonts/CascadiaCode.woff2') format('woff2'),
-    url('src/fonts/CascadiaCode.ttf') format('truetype');
+    url('./fonts/CascadiaCode.woff2') format('woff2'),
+    url('./fonts/CascadiaCode.ttf') format('truetype');
 }
