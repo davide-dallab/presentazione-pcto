@@ -5,29 +5,34 @@
 :root {
   font-family: 'Cascadia Code', monospace;
   font-size: 20px;
+  --presentation-size: 1150px;
 }
 
-@media screen and (width < 1200px) {
+@media screen and (900px <= width < 1200px), screen and (500px <= height < 700px) {
   :root {
     font-size: 16px;
+    --presentation-size: 850px;
   }
 }
 
-@media screen and (width < 900px) {
+@media screen and (750px <= width < 900px), screen and (400px <= height < 500px) {
   :root {
     font-size: 12px;
+    --presentation-size: 700px;
   }
 }
 
-@media screen and (width < 750px) {
+@media screen and (550px <= width < 750px), screen and (300px <= height < 400px) {
   :root {
     font-size: 10px;
+    --presentation-size: 500px;
   }
 }
 
-@media screen and (width < 550px) {
+@media screen and (width < 550px), screen and (height < 300px) {
   :root {
     font-size: 8px;
+    --presentation-size: 400px;
   }
 }
 
@@ -44,7 +49,7 @@ body {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  width: min(90%, 1250px);
+  width: var(--presentation-size);
   --frame-background-color: #488a18;
   --frame-color: #fcffe5;
   --slide-background-color: #e8f8d0;
