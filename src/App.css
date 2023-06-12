@@ -300,7 +300,36 @@ a.highlight:hover {
 
 .mansione img {
   width: 50%;
-  color: red;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+}
+
+.value>div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+  width: 100%;
+  height: 65%;
+}
+
+.value>div>div {
+  flex-basis: calc(50% - 0.5em);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: .75rem;
+  gap: .75rem;
+}
+
+.value>div>div>img {
+  height: 3rem;
+  margin: 0 .25em;
 }
 
 @media print {

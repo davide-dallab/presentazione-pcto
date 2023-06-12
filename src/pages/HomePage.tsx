@@ -84,15 +84,15 @@ export default function HomePage() {
           <h1>Tutoraggio</h1>
           <div>
             <div className="mansione highlight">
-              <img src={images.glasses} style={{scale: '1.25'}}/>
+              <img src={images.glasses} style={{ scale: '1.25' }} />
               <span>Sorveglianza durante il corso di coding</span>
             </div>
             <div className="mansione highlight">
-              <img src={images.magnifingGlass}/>
+              <img src={images.magnifingGlass} />
               <span>Aiuto comprensione e soluzione problemi</span>
             </div>
             <div className="mansione highlight">
-              <img src={images.explanation} style={{scale: '1.5'}}/>
+              <img src={images.explanation} style={{ scale: '1.5' }} />
               <span>Spiegazioni teoriche di semplici concetti informatici</span>
             </div>
           </div>
@@ -137,8 +137,33 @@ export default function HomePage() {
             <span>Porsi a ragazzi più giovani</span>
           </div>
         </Slide>
-        <Slide title="Valore dell'esperienza" id="value-fainelli-gandhi" className="value fainelli-gandhi">
-
+        <Slide title="Valore dell'esperienza" id="value-fainelli-gandhi" className="value fainelli-gandhi flex-list">
+          <div>
+            <div className="highlight">
+              <img src={images.knowledge} />
+              <span>
+                Consolidazione delle conoscenze grazie alle spiegazioni
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.teach} />
+              <span>
+                Sguardo nel mondo dell'insegnamento
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.skill} />
+              <span>
+                Utilizzo delle competenze sviluppate nel tempo libero
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.skill} />
+              <span>
+                Utilizzo delle competenze sviluppate nel tempo libero
+              </span>
+            </div>
+          </div>
         </Slide>
         <Slide title="Elettrone" id="elettrone" className="title flex-list elettrone">
           <h1>Elettrone</h1>
@@ -201,15 +226,15 @@ export default function HomePage() {
           <h1>Sviluppo Software</h1>
           <div>
             <div className="mansione highlight">
-              <img src={images.powerapps}/>
+              <img src={images.powerapps} />
               <span>Sviluppo app aziendale tramite Microsoft Power Apps</span>
             </div>
             <div className="mansione highlight">
-              <img src={images.reactLogo}/>
+              <img src={images.reactLogo} />
               <span>Sviluppo WebApp con React.js</span>
             </div>
             <div className="mansione highlight">
-              <img src={images.api}/>
+              <img src={images.api} />
               <span>Sviluppo RESTful API in ambiente .NET</span>
             </div>
           </div>
@@ -255,13 +280,38 @@ export default function HomePage() {
           </div>
         </Slide>
         <Slide title="Valore dell'esperienza" id="value-elettrone" className="value elettrone">
-          
+          <div>
+            <div className="highlight">
+              <img src={images.knowledge} />
+              <span>
+                Consolidazione delle conoscenze grazie alle spiegazioni
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.teach} />
+              <span>
+                Sguardo nel mondo dell'insegnamento
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.skill} />
+              <span>
+                Utilizzo delle competenze sviluppate nel tempo libero
+              </span>
+            </div>
+            <div className="highlight">
+              <img src={images.skill} />
+              <span>
+                Utilizzo delle competenze sviluppate nel tempo libero
+              </span>
+            </div>
+          </div>
         </Slide>
         <Slide title="Considerazioni finali" id="considerations">
 
         </Slide>
         <Slide title="Prospettive future" id="future">
-          
+
         </Slide>
       </SlideShow>
     </>

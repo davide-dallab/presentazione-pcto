@@ -24,6 +24,9 @@ import explanation from "./reasonable.png";
 import powerapps from "./power-apps.svg";
 import api from "./api.png";
 import young from "./children.png";
+import teach from "./teach.png";
+import skill from "./pencil.png";
+import knowledge from "./knowledge.png";
 
 const resources = {
     computerScience,
@@ -51,7 +54,10 @@ const resources = {
     explanation,
     powerapps,
     api,
-    young
+    young,
+    teach,
+    skill,
+    knowledge
 }
 
 export default resources;
