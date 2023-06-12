@@ -50,14 +50,14 @@ body {
   left: 50%;
   translate: -50% -50%;
   width: var(--presentation-size);
-  --frame-background-color: #488a18;
-  --frame-color: #fcffe5;
-  --slide-background-color: #e8f8d0;
+  --frame-background-color: #601a7e;
+  --frame-color: #f9ebfe;
+  --slide-background-color: #e7d2ef;
   --slide-highlight-background-color: #fff5;
   --slide-highlight-color: black;
-  --slide-highlight-border-color: #488a18;
+  --slide-highlight-border-color: #601a7e;
   --slide-highlight-background-color-hover: #fffa;
-  --title-color: #24470b;
+  --title-color: #3d0c53;
 }
 
 h1, h2, h3 {
@@ -120,7 +120,7 @@ h1, h2, h3 {
 }
 
 #fainelli-gandhi {
-  background: linear-gradient(185deg, #e8f8d0, #e8f8d0 15%, #fff9d0 50%, #fff9d0);
+  background: linear-gradient(185deg, #e7d2ef, #e7d2ef 15%, #fff9d0 50%, #fff9d0);
 }
 
 #elettrone {
@@ -128,7 +128,7 @@ h1, h2, h3 {
 }
 
 #considerations {
-  background: linear-gradient(185deg, #F5F5F7, #F5F5F7 15%, #e8f8d0 50%, #e8f8d0);
+  background: linear-gradient(185deg, #F5F5F7, #F5F5F7 15%, #e7d2ef 50%, #e7d2ef);
 }
 
 .slide-show[data-current*="elettrone"] {

@@ -137,6 +137,9 @@ export default function HomePage() {
             <span>Porsi a ragazzi più giovani</span>
           </div>
         </Slide>
+        <Slide title="Valore dell'esperienza" id="value-fainelli-gandhi" className="value fainelli-gandhi">
+
+        </Slide>
         <Slide title="Elettrone" id="elettrone" className="title flex-list elettrone">
           <h1>Elettrone</h1>
         </Slide>
@@ -250,6 +253,9 @@ export default function HomePage() {
             <img src={images.reactLogo} />
             <span>Libreria React</span>
           </div>
+        </Slide>
+        <Slide title="Valore dell'esperienza" id="value-elettrone" className="value elettrone">
+          
         </Slide>
         <Slide title="Considerazioni finali" id="considerations">
 
