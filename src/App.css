@@ -50,6 +50,7 @@ body {
   left: 50%;
   translate: -50% -50%;
   width: var(--presentation-size);
+  aspect-ratio: 16 / 9;
   --frame-background-color: #601a7e;
   --frame-color: #f9ebfe;
   --slide-background-color: #e7d2ef;
@@ -104,7 +105,7 @@ h1, h2, h3 {
 }
 
 .index-link {
-  padding: 0 1rem;
+  padding: .5rem 1rem;
   transition: background-color linear 250ms, font-weight linear 250ms;
 }
 

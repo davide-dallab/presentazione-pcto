@@ -282,27 +282,27 @@ function App() {
       <Slide title="Valore dell'esperienza" id="value-elettrone" className="value elettrone">
         <div>
           <div className="highlight">
-            <img src={images.knowledge} />
+            <img src={images.orgchart} />
             <span>
-              Consolidazione delle conoscenze grazie alle spiegazioni
+              Capire il funzionamento di un'azienda
             </span>
           </div>
           <div className="highlight">
-            <img src={images.teach} />
+            <img src={images.webdev} />
             <span>
-              Sguardo nel mondo dell'insegnamento
-            </span>
-          </div>
-          <div className="highlight">
-            <img src={images.skill} />
-            <span>
-              Utilizzo delle competenze sviluppate nel tempo libero
+              Nuova passione
             </span>
           </div>
           <div className="highlight">
             <img src={images.skill} />
             <span>
               Utilizzo delle competenze sviluppate nel tempo libero
+            </span>
+          </div>
+          <div className="highlight">
+            <img src={images.path} />
+            <span>
+              Conversazioni sui possibili percorsi successivi al diploma
             </span>
           </div>
         </div>
@@ -318,3 +318,24 @@ function App() {
 }
 
 export default App;
+
+/* 
+  1 titolo
+  
+  2.1 azienda (dov'è, cosa fa, logo) -> istituto comprensivo 6 fainelli gandhi, via puglie 7/e (chievo), scuola media
+  2.2 esperienza (orario, periodo, tutor) -> dal 6/12/22 al 4/4/22, il lunedì dalle 14:30 alle 16:30, tutor aziendale: ornella residori, tutor scolastico: salvatore valenza
+  2.3 mansioni (cosa ho fatto) -> sorveglianza al corso di coding, aiuto nella comprensione e soluzione dei problemi, spiegazioni teoriche di semplici concetti informatici
+  2.4 competenze applicate -> Conoscenze informatiche, Problem solving, Conoscenze nel mondo del GameDev, conoscenza di scratch
+  2.5 competenze acquisite -> Semplificazione di problemi complessi, Tecniche di didattica, Comunicazione con ragazzi più giovani
+  2.6 a cosa è servito -> Consolidare le conoscenze base dell'informatica, dare uno sguardo al mondo dell'insegnamento, mettere in pratica le competenze apprese nel tempo libero
+
+  3.1 azienda (dov'è, cosa fa, logo) -> Elettrone, via enrico fermi 11/a / via augusto righi 2 (onesky), soluzioni intelligenti per la gestione dell'energia elettrica, E
+  3.2 esperienza (orario, periodo, tutor) -> dal 6/6/22 al 1/7/22, dal lunedì al venerdì 9-13/14-18, tutor aziendale: massimiliano turazzini e damiano salezze, tutor scolastico: salvatore valenza
+  3.3 mansioni (cosa ho fatto) -> sviluppo powerapp, sviluppo webapp in react.js, sviluppo restful api in ambiente .net 
+  3.4 competenze applicate -> lavoro in team, linguaggio c#, conoscenza database, creazione di pagine statiche
+  3.5 competenze acquisite -> team building, linguaggio javascript, libreria react
+  3.6 a cosa è servito -> capire il funzionamento di un'azienda, mettere in pratica le competenze apprese nel tempo libero, trovare una nuova passione
+
+  5 considerazioni finali -> 
+  4 propsettive future
+ */
