@@ -54,12 +54,17 @@
 
 @media screen and not (orientation: landscape) {
     .slide-show {
+        aspect-ratio: auto;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr 5fr auto;
+        grid-template-rows: 1fr 6fr auto;
         grid-template-areas: "header"
             "content"
             "sidebar";
         overscroll-behavior-y: none;
+    }
+
+    .sidebar {
+        aspect-ratio: 3;
     }
 }
 

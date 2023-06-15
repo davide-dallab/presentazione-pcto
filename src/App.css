@@ -29,10 +29,17 @@
   }
 }
 
-@media screen and (width < 550px), screen and (height < 300px) {
+@media screen and (400px <= width < 550px), screen and (250px <= height < 300px) {
   :root {
     font-size: 8px;
     --presentation-size: 400px;
+  }
+}
+
+@media screen and (width < 400px), screen and (height < 250px) {
+  :root {
+    --presentation-size: min(75vw, calc(75vh * 16 / 9));
+    font-size: calc(var(--presentation-size) / 50);
   }
 }
 
