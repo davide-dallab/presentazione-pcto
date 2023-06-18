@@ -102,14 +102,12 @@ function SideBar(props: SlideBarProps) {
   useEffect(() => {
     if (containerRef.current === null || currentLinkRef.current === null)
       return;
-    
-    console.log(containerRef.current);
 
     containerRef.current.scrollTop =
       currentLinkRef.current.offsetTop -
       (containerRef.current.clientHeight -
         currentLinkRef.current.clientHeight) /
-        2;
+        2 - containerRef.current.offsetTop;
   }, [props.current]);
 
   return (
