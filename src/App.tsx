@@ -5,24 +5,28 @@ import { SlideShow, Slide } from "./components/SlideShow";
 function App() {
   return (
     <SlideShow className="presentation">
-      <Slide
-        title="Introduzione"
-        id="introduction"
-        className="title flex-list"
-      >
+      <Slide title="Introduzione" id="introduction" className="title flex-list">
         <h1>Presentazione PCTO</h1>
         <h2>Dalla Betta Davide</h2>
         <h3>A.S. 2022/2023</h3>
       </Slide>
       <Slide title="Le esperienze" id="experiences" className="flex-list">
         <div className="link-esperienza">
-          <a href="#fainelli-gandhi" className="highlight">Tutor: scuola media Fainelli Gandhi</a>
+          <a href="#fainelli-gandhi" className="highlight">
+            Tutor: scuola media Fainelli Gandhi
+          </a>
         </div>
         <div className="link-esperienza">
-          <a href="#elettrone" className="highlight">Web development: Elettrone</a>
+          <a href="#elettrone" className="highlight">
+            Web development: Elettrone
+          </a>
         </div>
       </Slide>
-      <Slide title="Fainelli-Gandhi" id="fainelli-gandhi" className="title flex-list fainelli-gandhi">
+      <Slide
+        title="Fainelli-Gandhi"
+        id="fainelli-gandhi"
+        className="title flex-list fainelli-gandhi"
+      >
         <h1>Fainelli-Ghandi</h1>
       </Slide>
       <Slide
@@ -80,11 +84,15 @@ function App() {
           </div>
         </div>
       </Slide>
-      <Slide title="Mansioni" id="tutoring-fainelli-gandhi" className="mansioni fainelli-gandhi">
+      <Slide
+        title="Mansioni"
+        id="tutoring-fainelli-gandhi"
+        className="mansioni fainelli-gandhi"
+      >
         <h1>Tutoraggio</h1>
         <div>
           <div className="mansione highlight">
-            <img src={images.glasses} style={{ scale: '1.25' }} />
+            <img src={images.glasses} style={{ scale: "1.25" }} />
             <span>Sorveglianza durante il corso di coding</span>
           </div>
           <div className="mansione highlight">
@@ -92,7 +100,7 @@ function App() {
             <span>Aiuto comprensione e soluzione problemi</span>
           </div>
           <div className="mansione highlight">
-            <img src={images.explanation} style={{ scale: '1.5' }} />
+            <img src={images.explanation} style={{ scale: "1.5" }} />
             <span>Spiegazioni teoriche di semplici concetti informatici</span>
           </div>
         </div>
@@ -137,44 +145,46 @@ function App() {
           <span>Porsi a ragazzi più giovani</span>
         </div>
       </Slide>
-      <Slide title="Valore dell'esperienza" id="value-fainelli-gandhi" className="value fainelli-gandhi flex-list">
+      <Slide
+        title="Valore dell'esperienza"
+        id="value-fainelli-gandhi"
+        className="value fainelli-gandhi flex-list"
+      >
         <div>
           <div className="highlight">
             <img src={images.knowledge} />
-            <span>
-              Consolidazione delle conoscenze grazie alle spiegazioni
-            </span>
+            <span>Consolidazione delle conoscenze grazie alle spiegazioni</span>
           </div>
           <div className="highlight">
             <img src={images.teach} />
-            <span>
-              Sguardo nel mondo dell'insegnamento
-            </span>
+            <span>Sguardo nel mondo dell'insegnamento</span>
           </div>
           <div className="highlight">
             <img src={images.skill} />
-            <span>
-              Utilizzo delle competenze sviluppate nel tempo libero
-            </span>
+            <span>Utilizzo delle competenze sviluppate nel tempo libero</span>
           </div>
           <div className="highlight">
-            <img src={images.skill} />
-            <span>
-              Utilizzo delle competenze sviluppate nel tempo libero
-            </span>
+            <img src={images.school} />
+            <span>Prospettiva diversa nel settore della scuola</span>
           </div>
         </div>
       </Slide>
-      <Slide title="Elettrone" id="elettrone" className="title flex-list elettrone">
+      <Slide
+        title="Elettrone"
+        id="elettrone"
+        className="title flex-list elettrone"
+      >
         <h1>Elettrone</h1>
       </Slide>
-      <Slide title="L'azienda" id="azienda-elettrone" className="esperienza elettrone">
+      <Slide
+        title="L'azienda"
+        id="azienda-elettrone"
+        className="esperienza elettrone"
+      >
         <div className="caratteristiche">
           <div className="highlight">
             <img src={images.building} />
-            <span>
-              Elettrone
-            </span>
+            <span>Elettrone</span>
           </div>
           <div className="highlight">
             <img src={images.location} />
@@ -222,7 +232,11 @@ function App() {
           </div>
         </div>
       </Slide>
-      <Slide title="Mansioni" id="software-development-elettrone" className="mansioni elettrone">
+      <Slide
+        title="Mansioni"
+        id="software-development-elettrone"
+        className="mansioni elettrone"
+      >
         <h1>Sviluppo Software</h1>
         <div>
           <div className="mansione highlight">
@@ -279,25 +293,23 @@ function App() {
           <span>Libreria React</span>
         </div>
       </Slide>
-      <Slide title="Valore dell'esperienza" id="value-elettrone" className="value elettrone">
+      <Slide
+        title="Valore dell'esperienza"
+        id="value-elettrone"
+        className="value elettrone"
+      >
         <div>
           <div className="highlight">
             <img src={images.orgchart} />
-            <span>
-              Capire il funzionamento di un'azienda
-            </span>
+            <span>Capire il funzionamento di un'azienda</span>
           </div>
           <div className="highlight">
             <img src={images.webdev} />
-            <span>
-              Nuova passione
-            </span>
+            <span>Nuova passione</span>
           </div>
           <div className="highlight">
             <img src={images.skill} />
-            <span>
-              Utilizzo delle competenze sviluppate nel tempo libero
-            </span>
+            <span>Utilizzo delle competenze sviluppate nel tempo libero</span>
           </div>
           <div className="highlight">
             <img src={images.path} />
@@ -308,10 +320,28 @@ function App() {
         </div>
       </Slide>
       <Slide title="Considerazioni finali" id="considerations">
-
+        <div className="thought highlight">Crescita professionale</div>
+        <div className="thought highlight">Nuove competenze</div>
+        <div className="thought highlight">Esperienze diverse</div>
+        <div className="thought highlight"></div>
+        <div className="thought highlight"></div>
       </Slide>
       <Slide title="Prospettive future" id="future">
-
+        <div className="step highlight flex-list">
+          <span className="title">Università di Trento</span>
+          <span>Informatica</span>
+        </div>
+        <div className="step highlight flex-list">
+          <span className="title">Carriera aziendale</span>
+          <span>Software Development</span>
+        </div>
+        <div className="step highlight flex-list">
+          <span className="title">Carriera accademica</span>
+          <span>Ricerca</span>
+        </div>
+      </Slide>
+      <Slide title="Fine" id="end" className="title flex-list">
+        <h2>Grazie!</h2>
       </Slide>
     </SlideShow>
   );

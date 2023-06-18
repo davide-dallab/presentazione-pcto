@@ -1,4 +1,10 @@
-import React, { ReactElement, ReactNode, useEffect, useRef, useState } from "react";
+import React, {
+  ReactElement,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import slideShowStyles from "./SlideShow.module.css";
 import classNames from "classnames";
 
@@ -8,11 +14,11 @@ interface SlideShowProps {
   headerStyle?: React.CSSProperties;
   sidebarStyle?: React.CSSProperties;
   className?: string;
-};
+}
 
 export function SlideShow(props: SlideShowProps) {
-  const headers: { title: string, id: string }[] = [];
-  props.children.forEach(slide => {
+  const headers: { title: string; id: string }[] = [];
+  props.children.forEach((slide) => {
     const id = slide.props.id ?? slide.props.title;
     headers.push({ title: slide.props.title, id });
   });
@@ -22,16 +28,22 @@ export function SlideShow(props: SlideShowProps) {
   const currentHeader = headers[pageIndex].title;
   const currentId = headers[pageIndex].id;
 
-  const className = classNames(slideShowStyles["slide-show"], props.className, 'slide-show');
+  const className = classNames(
+    slideShowStyles["slide-show"],
+    props.className,
+    "slide-show"
+  );
 
   return (
     <div className={className} style={props.style} data-current={currentId}>
       <Header header={currentHeader} style={props.headerStyle} />
-      <SideBar headers={headers} current={pageIndex} style={props.sidebarStyle} />
+      <SideBar
+        headers={headers}
+        current={pageIndex}
+        style={props.sidebarStyle}
+      />
       <ContentSection setPageIndex={setPageIndex}>
-        {
-          props.children
-        }
+        {props.children}
       </ContentSection>
     </div>
   );
@@ -43,15 +55,22 @@ interface ContentSectionProps {
 }
 
 function ContentSection(props: ContentSectionProps) {
-  const className = classNames(slideShowStyles["content-section"], 'content');
+  const className = classNames(slideShowStyles["content-section"], "content");
 
-  return <div className={className} onScrollCapture={evt => {
-    props.setPageIndex(Math.floor(evt.currentTarget.scrollTop / evt.currentTarget.clientHeight + .1));
-  }}>
-    {
-      props.children
-    }
-  </div>
+  return (
+    <div
+      className={className}
+      onScrollCapture={(evt) => {
+        props.setPageIndex(
+          Math.floor(
+            evt.currentTarget.scrollTop / evt.currentTarget.clientHeight + 0.1
+          )
+        );
+      }}
+    >
+      {props.children}
+    </div>
+  );
 }
 
 interface HeaderProps {
@@ -60,50 +79,63 @@ interface HeaderProps {
 }
 
 function Header(props: HeaderProps) {
-  const className = classNames(slideShowStyles["header"], 'header');
+  const className = classNames(slideShowStyles["header"], "header");
 
-  return <div className={className} style={props.style}>
-    <span>
-      {
-        props.header
-      }
-    </span>
-  </div>
+  return (
+    <div className={className} style={props.style}>
+      <span>{props.header}</span>
+    </div>
+  );
 }
 
 interface SlideBarProps {
-  headers: { title: string, id: string }[];
+  headers: { title: string; id: string }[];
   current: number;
   style?: React.CSSProperties;
 }
 
 function SideBar(props: SlideBarProps) {
-  const className = classNames(slideShowStyles["sidebar"], 'sidebar');
+  const className = classNames(slideShowStyles["sidebar"], "sidebar");
   const containerRef = useRef<HTMLDivElement>(null);
   const currentLinkRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    if (containerRef.current === null || currentLinkRef.current === null) return;
+    if (containerRef.current === null || currentLinkRef.current === null)
+      return;
+    
+    console.log(containerRef.current);
 
-    containerRef.current.scrollTop = currentLinkRef.current.offsetTop - (containerRef.current.clientHeight - currentLinkRef.current.clientHeight) / 2;
+    containerRef.current.scrollTop =
+      currentLinkRef.current.offsetTop -
+      (containerRef.current.clientHeight -
+        currentLinkRef.current.clientHeight) /
+        2;
   }, [props.current]);
 
-  return <div className={className} style={props.style} ref={containerRef}>
-    {
-      props.headers.map((header, index) => {
+  return (
+    <div className={className} style={props.style} ref={containerRef}>
+      {props.headers.map((header, index) => {
         const isCurrent = index === props.current;
-        const className = classNames('index-link', slideShowStyles["index-link"], isCurrent ? 'current' : null);
+        const className = classNames(
+          "index-link",
+          slideShowStyles["index-link"],
+          isCurrent ? "current" : null
+        );
 
         return (
-          <a href={`#${header.id}`} className={className} key={header.id} id={`${header.id}-link`} ref={isCurrent ? currentLinkRef : null}>
-            {
-              header.title
-            }
+          <a
+            href={`#${header.id}`}
+            className={className}
+            key={header.id}
+            id={`${header.id}-link`}
+            ref={isCurrent ? currentLinkRef : null}
+          >
+            {header.title}
           </a>
         );
-      })
-    }
-  </div>
+      })}
+    </div>
+  );
 }
 
 interface SlideProps {
@@ -116,11 +148,15 @@ interface SlideProps {
 
 export function Slide(props: SlideProps) {
   const id = props.id ?? props.title;
-  const className = classNames(slideShowStyles["slide-content"], props.className, 'slide');
+  const className = classNames(
+    slideShowStyles["slide-content"],
+    props.className,
+    "slide"
+  );
 
-  return <div className={className} id={id} style={props.style}>
-    {
-      props.children
-    }
-  </div>
+  return (
+    <div className={className} id={id} style={props.style}>
+      {props.children}
+    </div>
+  );
 }

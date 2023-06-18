@@ -3,33 +3,37 @@
 }
 
 :root {
-  font-family: 'Cascadia Code', monospace;
+  font-family: "Cascadia Code", monospace;
   font-size: 20px;
   --presentation-size: 1150px;
 }
 
-@media screen and (900px <= width < 1200px), screen and (500px <= height < 700px) {
+@media screen and (900px <= width < 1200px),
+  screen and (500px <= height < 700px) {
   :root {
     font-size: 16px;
     --presentation-size: 850px;
   }
 }
 
-@media screen and (750px <= width < 900px), screen and (400px <= height < 500px) {
+@media screen and (750px <= width < 900px),
+  screen and (400px <= height < 500px) {
   :root {
     font-size: 12px;
     --presentation-size: 700px;
   }
 }
 
-@media screen and (550px <= width < 750px), screen and (300px <= height < 400px) {
+@media screen and (550px <= width < 750px),
+  screen and (300px <= height < 400px) {
   :root {
     font-size: 10px;
     --presentation-size: 500px;
   }
 }
 
-@media screen and (400px <= width < 550px), screen and (250px <= height < 300px) {
+@media screen and (400px <= width < 550px),
+  screen and (250px <= height < 300px) {
   :root {
     font-size: 8px;
     --presentation-size: 400px;
@@ -49,7 +53,7 @@ body {
 }
 
 .slide-show {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   margin: auto;
   position: absolute;
@@ -68,7 +72,9 @@ body {
   --title-color: #3d0c53;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
 }
 
@@ -88,7 +94,7 @@ h1, h2, h3 {
 }
 
 .slide-show .sidebar {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .slide.title {
@@ -112,7 +118,7 @@ h1, h2, h3 {
 }
 
 .index-link {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   transition: background-color linear 250ms, font-weight linear 250ms;
 }
 
@@ -124,24 +130,42 @@ h1, h2, h3 {
 }
 
 .header {
-  border-left: .1rem solid #0002;
+  border-left: 0.1rem solid #0002;
 }
 
 #fainelli-gandhi {
-  background: linear-gradient(185deg, #e7d2ef, #e7d2ef 15%, #fff9d0 50%, #fff9d0);
+  background: linear-gradient(
+    185deg,
+    #e7d2ef,
+    #e7d2ef 15%,
+    #fff9d0 50%,
+    #fff9d0
+  );
 }
 
 #elettrone {
-  background: linear-gradient(175deg, #fff9d0, #fff9d0 15%, #F5F5F7 50%, #F5F5F7);
+  background: linear-gradient(
+    175deg,
+    #fff9d0,
+    #fff9d0 15%,
+    #f5f5f7 50%,
+    #f5f5f7
+  );
 }
 
 #considerations {
-  background: linear-gradient(185deg, #F5F5F7, #F5F5F7 15%, #e7d2ef 50%, #e7d2ef);
+  background: linear-gradient(
+    185deg,
+    #f5f5f7,
+    #f5f5f7 15%,
+    #e7d2ef 50%,
+    #e7d2ef
+  );
 }
 
 .slide-show[data-current*="elettrone"] {
   --frame-color: white;
-  --frame-background-color: #0283C2;
+  --frame-background-color: #0283c2;
 }
 
 .slide-show[data-current*="fainelli-gandhi"] {
@@ -150,12 +174,12 @@ h1, h2, h3 {
 }
 
 .slide.elettrone {
-  --slide-background-color: #F5F5F7;
-  --slide-highlight-border-color: #0283C2;
+  --slide-background-color: #f5f5f7;
+  --slide-highlight-border-color: #0283c2;
   --slide-highlight-background-color: #2ca3df99;
-  --slide-highlight-color: #F5F5F7;
+  --slide-highlight-color: #f5f5f7;
   --title-color: #0b4f70;
-  --image-filter: invert(.95);
+  --image-filter: invert(0.95);
 }
 
 .slide.fainelli-gandhi {
@@ -164,7 +188,7 @@ h1, h2, h3 {
   --slide-highlight-background-color: #89500f99;
   --slide-highlight-color: #fff9d0;
   --title-color: #5a350c;
-  --image-filter: invert(.95) sepia(100%);
+  --image-filter: invert(0.95) sepia(100%);
 }
 
 .index-link:hover {
@@ -179,9 +203,9 @@ h1, h2, h3 {
 .highlight {
   background-color: var(--slide-highlight-background-color);
   transition: background-color 250ms;
-  border: solid .1rem var(--slide-highlight-border-color);
+  border: solid 0.1rem var(--slide-highlight-border-color);
   color: var(--slide-highlight-color);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 a.highlight:hover {
@@ -197,36 +221,36 @@ a.highlight:hover {
 
 .skills {
   justify-content: space-evenly;
-  gap: .75rem;
+  gap: 0.75rem;
   font-size: 1.5rem;
 }
 
-.skills>div {
+.skills > div {
   padding: 1rem 0;
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.skills>div>span {
+.skills > div > span {
   font-weight: bold;
   text-decoration: underline;
   font-size: 1.1rem;
 }
 
-.skills>div>span:nth-child(2):nth-last-child(2) {
-  border-right: solid var(--slide-highlight-color) .15rem;
-  padding-right: .5rem;
-  margin-right: .5rem;
+.skills > div > span:nth-child(2):nth-last-child(2) {
+  border-right: solid var(--slide-highlight-color) 0.15rem;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-.skills>div>span:nth-child(3):last-child {
-  font-size: .75rem;
+.skills > div > span:nth-child(3):last-child {
+  font-size: 0.75rem;
   font-weight: normal;
   text-decoration: none;
 }
 
-.skills>div>img {
+.skills > div > img {
   width: 3rem;
   margin: 0 1.25rem;
 }
@@ -254,32 +278,32 @@ a.highlight:hover {
   font-size: 1.05rem;
 }
 
-.esperienza>.caratteristiche {
+.esperienza > .caratteristiche {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
   width: 100%;
   height: 65%;
 }
 
-.esperienza>.caratteristiche>div {
+.esperienza > .caratteristiche > div {
   flex-basis: calc(50% - 0.5em);
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: .75rem;
-  gap: .75rem;
+  padding: 0.75rem;
+  gap: 0.75rem;
 }
 
-.esperienza>.caratteristiche>div:last-child:nth-child(2n+1) {
+.esperienza > .caratteristiche > div:last-child:nth-child(2n + 1) {
   flex-basis: 75%;
 }
 
-.esperienza>.caratteristiche>div>img {
+.esperienza > .caratteristiche > div > img {
   height: 3rem;
-  margin: 0 .25em;
+  margin: 0 0.25em;
 }
 
 .mansioni {
@@ -289,7 +313,7 @@ a.highlight:hover {
   justify-content: space-evenly;
 }
 
-.mansioni>div {
+.mansioni > div {
   width: 100%;
   height: 75%;
   display: flex;
@@ -316,28 +340,65 @@ a.highlight:hover {
   font-size: 1.05rem;
 }
 
-.value>div{
+.value > div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
   width: 100%;
   height: 65%;
 }
 
-.value>div>div {
+.value > div > div {
   flex-basis: calc(50% - 0.5em);
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: .75rem;
-  gap: .75rem;
+  padding: 0.75rem;
+  gap: 0.75rem;
 }
 
-.value>div>div>img {
+.value > div > div > img {
   height: 3rem;
-  margin: 0 .25em;
+  margin: 0 0.25em;
+}
+
+.thought {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content
+}
+
+#future {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "universita azienda"
+    "universita ricerca";
+  gap: 1rem;
+}
+
+.step {
+  gap: 1rem;
+  align-items: center;
+}
+
+.step .title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.step:nth-child(1) {
+  grid-area: universita;
+}
+.step:nth-child(2) {
+  grid-area: azienda;
+}
+.step:nth-child(3) {
+  grid-area: ricerca;
 }
 
 @media print {
@@ -357,8 +418,7 @@ a.highlight:hover {
 }
 
 @font-face {
-  font-family: 'Cascadia Code';
-  src: local('Cascadia Code'),
-    url('./fonts/CascadiaCode.woff2') format('woff2'),
-    url('./fonts/CascadiaCode.ttf') format('truetype');
+  font-family: "Cascadia Code";
+  src: local("Cascadia Code"), url("./fonts/CascadiaCode.woff2") format("woff2"),
+    url("./fonts/CascadiaCode.ttf") format("truetype");
 }

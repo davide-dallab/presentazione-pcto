@@ -29,6 +29,7 @@ import skill from "./pencil.png";
 import knowledge from "./knowledge.png";
 import orgchart from "./organization-chart.png";
 import path from "./route.png";
+import school from "./school.png";
 
 const resources = {
     computerScience,
@@ -61,7 +62,8 @@ const resources = {
     skill,
     knowledge,
     orgchart,
-    path
+    path,
+    school
 }
 
 export default resources;
