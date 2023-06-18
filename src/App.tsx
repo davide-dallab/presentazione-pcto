@@ -320,11 +320,15 @@ function App() {
         </div>
       </Slide>
       <Slide title="Considerazioni finali" id="considerations">
-        <div className="thought highlight">Crescita professionale</div>
-        <div className="thought highlight">Nuove competenze</div>
-        <div className="thought highlight">Esperienze diverse</div>
-        <div className="thought highlight"></div>
-        <div className="thought highlight"></div>
+        <div className="thoughts-list">
+          <div className="thought highlight">
+            Crescita <br /> professionale
+          </div>
+          <div className="thought highlight">Nuove <br /> competenze</div>
+          <div className="thought highlight">Esperienze <br /> diverse</div>
+          <div className="thought highlight">Maggiore <br /> sicurezza</div>
+          <div className="thought highlight">Idee più <br /> chiare</div>
+        </div>
       </Slide>
       <Slide title="Prospettive future" id="future">
         <div className="step highlight flex-list">

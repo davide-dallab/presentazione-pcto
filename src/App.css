@@ -364,11 +364,46 @@ a.highlight:hover {
   margin: 0 0.25em;
 }
 
+.thoughts-list {
+  position: relative;
+  height: 100%;
+}
+
 .thought {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: min-content
+  /* width: min-content; */
+  aspect-ratio: 1;
+  padding: 1rem;
+  position: absolute;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.thought:nth-child(1) {
+  left: 0%;
+  top: 5%;
+}
+
+.thought:nth-child(2) {
+  left: 20%;
+  bottom: 5%;
+}
+
+.thought:nth-child(3) {
+  right: 40%;
+  top: 10%;
+}
+
+.thought:nth-child(4) {
+  right: 20%;
+  bottom: 15%;
+}
+
+.thought:nth-child(5) {
+  right: 5%;
+  top: 10%;
 }
 
 #future {
@@ -413,7 +448,11 @@ a.highlight:hover {
   }
 
   :root {
-    font-size: 24px;
+    font-size: 26px;
+  }
+
+  .slide-show .slide {
+    padding: 5rem 2.5rem;
   }
 }
 
