@@ -7,8 +7,9 @@ function App() {
     <SlideShow className="presentation">
       <Slide title="Introduzione" id="introduction" className="title flex-list">
         <h1>Presentazione PCTO</h1>
-        <h2>Dalla Betta Davide</h2>
+        <h2>Dalla Betta Davide, 5DI</h2>
         <h3>A.S. 2022/2023</h3>
+        <img src="logo-marconi.png" />
       </Slide>
       <Slide title="Le esperienze" id="experiences" className="flex-list">
         <div className="link-esperienza">
@@ -134,15 +135,15 @@ function App() {
       >
         <div className="highlight">
           <img src={images.simpleProblems} />
-          <span>Scomposizione di problemi complessi</span>
+          <span>Problem solving: analisi e scomposizione</span>
         </div>
         <div className="highlight">
           <img src={images.book} />
-          <span>Metodi di insegnamento</span>
+          <span>Teaching skills</span>
         </div>
         <div className="highlight">
           <img src={images.young} />
-          <span>Porsi a ragazzi più giovani</span>
+          <span>Relazionarsi con un target più giovane</span>
         </div>
       </Slide>
       <Slide
@@ -324,10 +325,18 @@ function App() {
           <div className="thought highlight">
             Crescita <br /> professionale
           </div>
-          <div className="thought highlight">Nuove <br /> competenze</div>
-          <div className="thought highlight">Esperienze <br /> diverse</div>
-          <div className="thought highlight">Maggiore <br /> sicurezza</div>
-          <div className="thought highlight">Idee più <br /> chiare</div>
+          <div className="thought highlight">
+            Nuove <br /> competenze
+          </div>
+          <div className="thought highlight">
+            Esperienze <br /> diverse
+          </div>
+          <div className="thought highlight">
+            Maggiore <br /> sicurezza
+          </div>
+          <div className="thought highlight">
+            Idee più <br /> chiare
+          </div>
         </div>
       </Slide>
       <Slide title="Prospettive future" id="future">
