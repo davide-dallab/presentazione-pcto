@@ -14,6 +14,7 @@ interface SlideShowProps {
   headerStyle?: React.CSSProperties;
   sidebarStyle?: React.CSSProperties;
   className?: string;
+  id?: string;
 }
 
 export function SlideShow(props: SlideShowProps) {
@@ -35,7 +36,7 @@ export function SlideShow(props: SlideShowProps) {
   );
 
   return (
-    <div className={className} style={props.style} data-current={currentId}>
+    <div className={className} style={props.style} data-current={currentId} id={props.id}>
       <Header header={currentHeader} style={props.headerStyle} />
       <SideBar
         headers={headers}

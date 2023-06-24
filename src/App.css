@@ -62,14 +62,18 @@ body {
   translate: -50% -50%;
   width: var(--presentation-size);
   aspect-ratio: 16 / 9;
-  --frame-background-color: #601a7e;
-  --frame-color: #f9ebfe;
-  --slide-background-color: #e7d2ef;
+  --default-hue: 100;
+  --default-background-color: hsl(var(--default-hue), 22%, 90%);
+  --fainelli-gandhi-background-color: #fff9d0;
+  --elettrone-background-color: #f5f5f7;
+  --frame-background-color: hsl(var(--default-hue), 60%, 40%);
+  --frame-color: hsl(var(--default-hue), 90%, 95%);
+  --slide-background-color: var(--default-background-color);
   --slide-highlight-background-color: #fff5;
   --slide-highlight-color: black;
-  --slide-highlight-border-color: #601a7e;
+  --slide-highlight-border-color: hsl(var(--default-hue), 18%, 38%);
   --slide-highlight-background-color-hover: #fffa;
-  --title-color: #3d0c53;
+  --title-color: hsl(var(--default-hue), 46%, 20%);
 }
 
 h1,
@@ -136,30 +140,30 @@ h3 {
 #fainelli-gandhi {
   background: linear-gradient(
     185deg,
-    #e7d2ef,
-    #e7d2ef 15%,
-    #fff9d0 50%,
-    #fff9d0
+    var(--default-background-color),
+    var(--default-background-color) 15%,
+    var(--fainelli-gandhi-background-color) 50%,
+    var(--fainelli-gandhi-background-color)
   );
 }
 
 #elettrone {
   background: linear-gradient(
     175deg,
-    #fff9d0,
-    #fff9d0 15%,
-    #f5f5f7 50%,
-    #f5f5f7
+    var(--fainelli-gandhi-background-color),
+    var(--fainelli-gandhi-background-color) 15%,
+    var(--elettrone-background-color) 50%,
+    var(--elettrone-background-color)
   );
 }
 
 #considerations {
   background: linear-gradient(
     185deg,
-    #f5f5f7,
-    #f5f5f7 15%,
-    #e7d2ef 50%,
-    #e7d2ef
+    var(--elettrone-background-color),
+    var(--elettrone-background-color) 15%,
+    var(--default-background-color) 50%,
+    var(--default-background-color)
   );
 }
 

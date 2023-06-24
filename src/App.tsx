@@ -4,7 +4,7 @@ import { SlideShow, Slide } from "./components/SlideShow";
 
 function App() {
   return (
-    <SlideShow className="presentation">
+    <SlideShow className="presentation" id="presentation">
       <Slide title="Introduzione" id="introduction" className="title flex-list">
         <h1>Presentazione PCTO</h1>
         <h2>Dalla Betta Davide, 5DI</h2>
