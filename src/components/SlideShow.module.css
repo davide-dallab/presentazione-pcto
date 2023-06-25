@@ -1,10 +1,11 @@
 .slide-show {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: .9fr 4fr auto;
   grid-template-areas:
     "sidebar header"
-    "sidebar content";
+    "sidebar content"
+    "progress-bar progress-bar";
 }
 
 .sidebar {
@@ -53,15 +54,28 @@
   justify-content: center;
 }
 
+.progress-bar {
+  grid-area: progress-bar;
+  width: 100%;
+  aspect-ratio: 100 / 1;
+}
+
+.progress-bar-fill {
+  transform-origin: left;
+  transition: scale 250ms;
+  height: 100%;
+}
+
 @media screen and not (orientation: landscape) {
   .slide-show {
     aspect-ratio: auto;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 6fr auto;
+    grid-template-rows: 1fr 6fr auto .1fr;
     grid-template-areas:
       "header"
       "content"
-      "sidebar";
+      "sidebar"
+      "progress-bar";
     overscroll-behavior-y: none;
   }
 
@@ -76,6 +90,10 @@
     grid-template-rows: 0 100%;
     width: 29.7cm;
     height: 21cm;
+  }
+
+  .header, .sidebar, .progress-bar {
+    display: none;
   }
 
   .content-section {

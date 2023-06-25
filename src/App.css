@@ -121,6 +121,15 @@ h3 {
   filter: var(--image-filter);
 }
 
+.progress-bar {
+  background-color: var(--frame-background-color);
+  border-top: .1rem solid #0002;
+}
+
+.progress-bar .fill {
+  background-color: #fff5;
+}
+
 .index-link {
   padding: 0.5rem 1rem;
   transition: background-color linear 250ms, font-weight linear 250ms;

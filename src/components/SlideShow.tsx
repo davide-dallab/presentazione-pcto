@@ -13,6 +13,7 @@ interface SlideShowProps {
   style?: React.CSSProperties;
   headerStyle?: React.CSSProperties;
   sidebarStyle?: React.CSSProperties;
+  progressBarStyle?: React.CSSProperties;
   className?: string;
   id?: string;
 }
@@ -36,7 +37,12 @@ export function SlideShow(props: SlideShowProps) {
   );
 
   return (
-    <div className={className} style={props.style} data-current={currentId} id={props.id}>
+    <div
+      className={className}
+      style={props.style}
+      data-current={currentId}
+      id={props.id}
+    >
       <Header header={currentHeader} style={props.headerStyle} />
       <SideBar
         headers={headers}
@@ -46,6 +52,25 @@ export function SlideShow(props: SlideShowProps) {
       <ContentSection setPageIndex={setPageIndex}>
         {props.children}
       </ContentSection>
+      <ProgressBar percentage={pageIndex / (headers.length - 1)} />
+    </div>
+  );
+}
+
+interface ProgressBarProps {
+  percentage: number;
+  style?: React.CSSProperties;
+}
+
+function ProgressBar(props: ProgressBarProps) {
+  const className = classNames(slideShowStyles["progress-bar"], "progress-bar");
+  const fillClassName = classNames(slideShowStyles["progress-bar-fill"], "fill");
+  return (
+    <div
+      className={className}
+      style={props.style}
+    >
+      <div className={fillClassName} style={{scale: `${props.percentage} 1`}}/>
     </div>
   );
 }
@@ -108,7 +133,8 @@ function SideBar(props: SlideBarProps) {
       currentLinkRef.current.offsetTop -
       (containerRef.current.clientHeight -
         currentLinkRef.current.clientHeight) /
-        2 - containerRef.current.offsetTop;
+        2 -
+      containerRef.current.offsetTop;
   }, [props.current]);
 
   return (
